@@ -1,6 +1,6 @@
 # Price Check
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Price Check es una aplicación Web que le permite a los usuarios realizar búsquedas online de productos y comparación de precios en diferentes supermercados y sitios de e-commerce. 
 
 ## Available Scripts
 
