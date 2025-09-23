@@ -12,17 +12,16 @@ const Login = () => {
 
   const handleTabChange = (event, newValue) => setActiveTab(newValue);
 
-  // Validación para iniciar sesión
+  // Validaciones
   const loginSchema = Yup.object().shape({
     email: Yup.string().email('Correo inválido').required('El correo es obligatorio'),
     password: Yup.string().required('La contraseña es obligatoria'),
   });
 
-  // Validación para registrarse
   const registerSchema = Yup.object().shape({
-    email: Yup.string().email('Correo inválido').required('El correo es obligatorio'),
-    password: Yup.string().min(6, 'La contraseña debe tener al menos 6 caracteres').required('La contraseña es obligatoria'),
     name: Yup.string().required('El nombre es obligatorio'),
+    email: Yup.string().email('Correo inválido').required('El correo es obligatorio'),
+    password: Yup.string().min(6, 'Debe tener al menos 6 caracteres').required('La contraseña es obligatoria'),
   });
 
   // Manejo de inicio de sesión
@@ -30,13 +29,12 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:5001/login', values);
       if (response.data.success) {
-        // Redirigir al usuario después de iniciar sesión
+        localStorage.setItem('user', JSON.stringify({ name: response.data.name, email: values.email }));
         navigate('/homepage');
       } else {
         setErrors({ email: response.data.message || 'Credenciales inválidas' });
       }
     } catch (error) {
-      console.error(error);
       setErrors({ email: 'Error al intentar iniciar sesión' });
     }
     setSubmitting(false);
@@ -48,12 +46,11 @@ const Login = () => {
       const response = await axios.post('http://localhost:5001/register', values);
       if (response.data.success) {
         alert('Registro exitoso. Ahora puedes iniciar sesión.');
-        setActiveTab(0); // Cambiar a la pestaña de inicio de sesión
+        setActiveTab(0); // Cambia a la pestaña de inicio de sesión
       } else {
         setErrors({ email: response.data.message || 'Error al registrarse' });
       }
     } catch (error) {
-      console.error(error);
       setErrors({ email: 'Error al intentar registrarse' });
     }
     setSubmitting(false);
@@ -65,24 +62,27 @@ const Login = () => {
       justifyContent="center"
       alignItems="center"
       minHeight="100vh"
-      bgcolor="#f4f6f8"
+      bgcolor="015b86"
+      sx={{
+        backgroundColor: "#E3F2FD",
+      }}
     >
       <Paper elevation={3} style={{ padding: '2rem', maxWidth: '400px', width: '100%' }}>
+        {/* Logo encima del formulario */}
+        <Box marginBottom="1rem" display="flex" justifyContent="center">
+          <img src="/6811628.png" alt="Logo" style={{ width: '100px', height: 'auto' }} />
+        </Box>
         <Tabs value={activeTab} onChange={handleTabChange} centered>
           <Tab label="Iniciar Sesión" />
           <Tab label="Registrarse" />
         </Tabs>
 
-        {activeTab === 0 && (
+        {activeTab === 0 ? (
           <Box marginTop="1rem">
-            <Typography variant="h5" textAlign="center" marginBottom="1rem">
+            <Typography variant="h5" textAlign="center" marginBottom="1rem" >
               Iniciar Sesión
             </Typography>
-            <Formik
-              initialValues={{ email: '', password: '' }}
-              validationSchema={loginSchema}
-              onSubmit={handleLogin}
-            >
+            <Formik initialValues={{ email: '', password: '' }} validationSchema={loginSchema} onSubmit={handleLogin}>
               {({ errors, touched, isSubmitting }) => (
                 <Form>
                   <Box marginBottom="1rem">
@@ -108,31 +108,19 @@ const Login = () => {
                       helperText={touched.password && errors.password}
                     />
                   </Box>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    disabled={isSubmitting}
-                  >
+                  <Button type="submit" variant="contained" color="primary" fullWidth disabled={isSubmitting} >
                     {isSubmitting ? 'Validando...' : 'Iniciar Sesión'}
                   </Button>
                 </Form>
               )}
             </Formik>
           </Box>
-        )}
-
-        {activeTab === 1 && (
+        ) : (
           <Box marginTop="1rem">
             <Typography variant="h5" textAlign="center" marginBottom="1rem">
               Registrarse
             </Typography>
-            <Formik
-              initialValues={{ name: '', email: '', password: '' }}
-              validationSchema={registerSchema}
-              onSubmit={handleRegister}
-            >
+            <Formik initialValues={{ name: '', email: '', password: '' }} validationSchema={registerSchema} onSubmit={handleRegister}>
               {({ errors, touched, isSubmitting }) => (
                 <Form>
                   <Box marginBottom="1rem">
@@ -169,13 +157,7 @@ const Login = () => {
                       helperText={touched.password && errors.password}
                     />
                   </Box>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    disabled={isSubmitting}
-                  >
+                  <Button type="submit" variant="contained" color="primary" fullWidth disabled={isSubmitting}>
                     {isSubmitting ? 'Registrando...' : 'Registrarse'}
                   </Button>
                 </Form>
@@ -184,7 +166,7 @@ const Login = () => {
           </Box>
         )}
       </Paper>
-      <Footer />
+
     </Box>
   );
 };

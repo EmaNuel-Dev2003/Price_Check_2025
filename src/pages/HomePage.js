@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
 import HeaderBubble from '../components/HeaderBubble';
+import CarritoContext from '../context/CarritoContext'; // Importa el contexto
 import { Box, TextField, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 
 const HomePage = () => {
@@ -9,6 +10,10 @@ const HomePage = () => {
   const [results, setResults] = useState([]); // Estado para los resultados
   const [loading, setLoading] = useState(false); // Estado para el cargando
   const [error, setError] = useState(null); // Estado para errores
+  const [searched, setSearched] = useState(false); // Estado para determinar si se ha realizado una búsqueda
+  const { agregarAlCarrito } = useContext(CarritoContext); // Accede a la función
+  const [clickedProductId, setClickedProductId] = useState(null);
+
 
   const handleSearch = async () => {
     if (!searchTerm) {
@@ -18,6 +23,8 @@ const HomePage = () => {
 
     setError(null); // Limpiar errores previos
     setLoading(true); // Mostrar el estado de cargando
+    setSearched(true); // Marcar que se ha realizado una búsqueda
+
     try {
       const response = await axios.get(
         `http://localhost:5001/productos/comparar?nombre=${searchTerm}` // URL de tu endpoint
@@ -77,11 +84,11 @@ const HomePage = () => {
                 <TableRow>
                   <TableCell sx={{ fontSize: '1.2rem', padding: '16px' }}><strong>Imagen</strong></TableCell>
                   <TableCell sx={{ fontSize: '1.2rem', padding: '16px' }}><strong>Producto</strong></TableCell>
-                  <TableCell 
+                  <TableCell
                     sx={{
                       backgroundColor: '#f0f8ff', // Fondo azul claro
                       color: '#000', // Texto negro
-                      fontWeight: 'bold', 
+                      fontWeight: 'bold',
                       fontSize: '1.3rem', // Tamaño de fuente más grande
                       textAlign: 'center',
                       padding: '16px',
@@ -110,9 +117,9 @@ const HomePage = () => {
                     <TableCell sx={{ fontSize: '1.1rem', padding: '16px' }}>{product.producto}</TableCell>
                     <TableCell
                       sx={{
-                        backgroundColor: '#f0f8ff', // Fondo azul claro
-                        fontWeight: 'bold', 
-                        fontSize: '1.8rem', // Tamaño de fuente más grande
+                        backgroundColor: '#f0f8ff',
+                        fontWeight: 'bold',
+                        fontSize: '1.8rem',
                         textAlign: 'center',
                         padding: '16px',
                       }}
@@ -123,20 +130,39 @@ const HomePage = () => {
                     <TableCell sx={{ padding: '16px' }}>
                       <Button
                         variant="contained"
-                        color="secondary"
-                        onClick={() => window.open(product.URL, '_blank')} // Abrir URL en nueva pestaña
+                        color="primary"
+                        onClick={() => window.open(product.URL, '_blank')}
+                        sx={{ marginRight: '10px' }}
                       >
                         Ver producto
                       </Button>
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        onClick={() => agregarAlCarrito({
+                          id: product.id,
+                          nombre: product.producto,
+                          precio: product.Precio,
+                          img: product.img,
+                          idSupermercado: product.idsupermercado,  
+                          idSubcategoria: product.idSubcategoria,
+                          url: product.URL
+                        })}
+                      >
+                        Agregar al carrito
+                      </Button>
+
                     </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
+
             </Table>
           </TableContainer>
         )}
 
-        {results.length === 0 && !loading && !error && (
+        {/* Mostrar "No se encontraron resultados." solo si se ha buscado y no hay resultados */}
+        {searched && results.length === 0 && !loading && !error && (
           <Typography variant="body1" sx={{ marginTop: '2rem' }}>
             No se encontraron resultados.
           </Typography>

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import HeaderBubble from '../components/HeaderBubble';
 import Footer from '../components/Footer';
 import axios from 'axios';
+import CarritoContext from '../context/CarritoContext'; // Importa el contexto
 import { Card, CardContent, Typography, Button, Box, Grid, Paper, TextField, Pagination } from '@mui/material';
 
 const Ofertas = () => {
@@ -10,6 +11,15 @@ const Ofertas = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1); // Página actual
   const itemsPerPage = 8; // Número de productos por página
+  const { agregarAlCarrito } = useContext(CarritoContext); // Accede a la función
+  const [clickedProductId, setClickedProductId] = useState(null);
+  
+
+  const supermercados = {
+    21: "Tienda Inglesa",
+    22: "Tata",
+  };
+
 
   useEffect(() => {
     const getProducts = async () => {
@@ -108,6 +118,9 @@ const Ofertas = () => {
                         >
                           {product.OFF ? `${product.OFF} de descuento` : ''}
                         </Typography>
+                        <Typography variant="body2">
+                          Supermercado: <strong>{supermercados[product.idSupermercado]}</strong>
+                        </Typography>
                         <Button
                           variant="contained"
                           color="primary"
@@ -121,6 +134,26 @@ const Ofertas = () => {
                         >
                           Ver Producto
                         </Button>
+                        <Button
+                          variant="contained"
+                          color={clickedProductId === product.id ? "success" : "secondary"}
+                          onClick={() => {
+                            setClickedProductId(product.id); // Cambia temporalmente el color
+                            agregarAlCarrito({
+                              id: product.id,
+                              nombre: product.Nombre,
+                              precio: product.Precio,
+                              img: product.img,
+                              idSupermercado: product.idSupermercado,
+                              idSubcategoria: product.idSubcategoria,
+                              url: product.URL
+                            });
+                            setTimeout(() => setClickedProductId(null), 300); // Vuelve al color original después de 300ms
+                          }}
+                        >
+                          Agregar al carrito
+                        </Button>
+
                       </CardContent>
                     </Card>
                   </Grid>
@@ -145,7 +178,7 @@ const Ofertas = () => {
 
         <Footer />
       </div>
-    </Box>
+    </Box >
   );
 };
 
