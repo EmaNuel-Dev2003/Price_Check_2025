@@ -10,6 +10,13 @@ Categorías: Agrupa los productos extraidos por categoría, esto le permite a lo
 Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 Carrito de Compras Inteligente: 
 
+## ✨ Características principales
+- 🔍 Búsqueda avanzada de productos por nombre, descripción o imagen.  
+- 📊 Comparación de precios entre múltiples tiendas.  
+- 📍 Recomendaciones basadas en la ubicación del usuario.  
+- 🛍️ Carrito de compras con seguimiento de productos.  
+- 👤 Sistema de usuarios: gratuito, premium y administradores.
+
 ### Capturas
 
 
