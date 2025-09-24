@@ -13,9 +13,6 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 ## Capturas
 ![Login](./assets/login_pricecheck.png)
-La aplicación cuenta con un Login el cual le permite a los usuarios iniciar sesión o registrarse.
-
-
 
 ![Home](./assets/homepage_pricecheck.png)
 
@@ -30,10 +27,15 @@ La aplicación cuenta con un Login el cual le permite a los usuarios iniciar ses
 ![Extraer](./assets/resultados_pricecheck.png)
 
 
+### Principales tecnologías utilizadas
+Para craer este sistema se utilizaron las siguientes tecnologías:
+- Node.js  para la gran parte del backend.
+- Python para realizar el Web Scraping (extraer la información de los productos).
+- React para el frontend de la aplicación.
+- PostgreSQL como respaldo para toda la información del proyecto
 
-
-### Tecnologías Utilizadas
-
+  
+  
 
 
 ### 
