@@ -12,7 +12,7 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 
 
-### Capturas
+## Capturas
 
 
 ### Preview Demo
