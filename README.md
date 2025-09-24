@@ -28,7 +28,18 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 
 ## Principales tecnologías utilizadas
-Para craer este sistema se utilizaron las siguientes tecnologías:
+Lenguajes de programación: 
+- Python
+- JavaScript
+
+Frameworks y otras herramientas:
+- Node.js
+- 
+- React (CRA)
+- Selenium
+- BeautifulSoup
+- 
+  
 - Node.js para la gran parte del backend.
 - Python para realizar el Web Scraping (extraer la información de los productos).
 - React para el frontend de la aplicación.
