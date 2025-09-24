@@ -1,22 +1,20 @@
 # Price Check
 ![Logo](./assets/logo_priceCheck.png)
 
-Price Check es una aplicación Web que le permite a los usuarios realizar búsquedas online de productos y comparar precios en diferentes supermercados y sitios de e-commerce. 
+Price Check es una aplicación web que le permite a los usuarios realizar búsquedas online de productos y comparar precios en diferentes supermercados y sitios de e-commerce. 
 
-##  Características principales
-- Extracción de Productos: Esta aplicación extrae la información de los sitios webs de los supermercados y la recopila en una base de datos, esta información es utilizada posteriormente para la comparación de precios y productos. 
-- Motor de búsqueda: La aplicación permite realizar búsquedas ingresando el nombre o las propiedades de los productos  directamente en la barra de búsqueda.
-- Categorías: Agrupa los productos extraidos en categorías, esto le permite a los usarios hacer búsquedas más exactas al aplicar filtros  como por ejemplo:
-Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
-- Carrito de Compras Inteligente: El sistema cuenta con un carrito de compras, el cual compara los productos agregados con productos disponibles en otros supermercados, hace una evalución de los precios y recomienda la opción más económica.
-
+## Características principales
+- Extracción de productos: Esta aplicación extrae la información de los sitios web de los supermercados y la recopila en una base de datos. Esta información es utilizada posteriormente para la comparación de precios y productos. 
+- Motor de búsqueda: La aplicación permite realizar búsquedas ingresando el nombre o las propiedades de los productos directamente en la barra de búsqueda.
+- Categorías: Agrupa los productos extraídos en categorías, lo que le permite a los usuarios hacer búsquedas más exactas al aplicar filtros como, por ejemplo: lácteos, frutas, verduras, carnes, productos de limpieza, etc.
+- Carrito de compras inteligente: El sistema cuenta con un carrito de compras, el cual compara los productos agregados con productos disponibles en otros supermercados, hace una evaluación de los precios y recomienda la opción más económica.
 
 ## Capturas
 ![Login](./assets/login_pricecheck.png)
 
 ![Home](./assets/homepage_pricecheck.png)
 
-![Categorias](./assets/categorias_prcecheck.png)
+![Categorías](./assets/categorias_pricecheck.png)
 
 ![Carrito](./assets/carrito_pricecheck.png)
 
@@ -24,8 +22,7 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 ![Extraer](./assets/extraer_pricecheck.png)
 
-![Extraer](./assets/resultados_pricecheck.png)
-
+![Resultados](./assets/resultados_pricecheck.png)
 
 ## Principales tecnologías utilizadas
 Lenguajes de programación: 
@@ -38,27 +35,24 @@ Frameworks y otras herramientas:
 - PostgreSQL
 - Selenium
 - BeautifulSoup
-- Node-fetch
+- node-fetch
 - Sharp
-- Resemblejs
-- String-simility
+- Resemble.js
+- string-similarity
 - Google Chrome
 - Toggle JavaScript
   
-## Estructura del Proyecto
+## Estructura del proyecto
 ![Diagrama de Clases](./assets/DiagramaDeClases.drawio.png)
   
 ## Mejoras a implementar
 En la siguiente fase del proyecto se implementarán las siguientes actualizaciones:
 - Sistemas de pago.
-- Subscripciones premium y gratuitas.
+- Suscripciones premium y gratuitas.
 - Extracción y actualización automática de productos.
 - Notificaciones de cambios de precios.
 - Integración con más tiendas online.
-- Versión mobile optimizada.
+- Versión móvil optimizada.
 
 ## Colaboradores 
-Este proyecto es un prototipo solicitado por la empresa de software PHI IT y fue creado por Emanuel Dufour, Mateo Quintela y Emanuel Núñez (EmaDev). 
-### 
-
-
+Este proyecto es un prototipo solicitado por la empresa de software **PHI IT** y fue creado por **Emanuel Dufour, Mateo Quintela y Emanuel Núñez (EmaDev)**.
