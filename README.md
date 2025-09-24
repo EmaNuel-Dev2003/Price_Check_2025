@@ -29,10 +29,10 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 ## Principales tecnologías utilizadas
 Para craer este sistema se utilizaron las siguientes tecnologías:
-- Node.js  para la gran parte del backend.
+- Node.js para la gran parte del backend.
 - Python para realizar el Web Scraping (extraer la información de los productos).
 - React para el frontend de la aplicación.
-- PostgreSQL como respaldo para toda la información del proyecto
+- PostgreSQL como base de datos para el proyecto.
 
   
   
