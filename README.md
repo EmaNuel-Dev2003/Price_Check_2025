@@ -17,6 +17,17 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 ![Home](./assets/homepage_pricecheck.png)
 
+![Categorias](./assets/categorias_prcecheck.png)
+
+![Carrito](./assets/carrito_pricecheck.png)
+
+![Comparador](./assets/comparador_pricecheck.png)
+
+![Extraer](./assets/extraer_pricecheck.png)
+
+![Extraer](./assets/resultados_pricecheck.png)
+
+
 ### Preview Demo
 
 
