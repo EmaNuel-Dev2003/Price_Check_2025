@@ -48,7 +48,13 @@ Frameworks y otras herramientas:
 ## Estructura del Proyecto
 ![Diagrama de Clases](./assets/DiagramaDeClases.drawio.png)
   
-
+## Mejoras a inplementar en la siguiente fase
+- Sistemas de pago.
+- Subscripciones premium y gratuitas.
+- Extracción y actualización automática de productos.
+- Notificaciones de cambios de precios.
+- Integración con más tiendas online.
+- Versión mobile optimizada.
 
 ### 
 
