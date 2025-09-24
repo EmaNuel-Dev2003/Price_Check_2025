@@ -34,7 +34,8 @@ Para craer este sistema se utilizaron las siguientes tecnologías:
 - React para el frontend de la aplicación.
 - PostgreSQL como base de datos para el proyecto.
 
-  
+## Estructura del Proyecto
+![Diagrama de Clases](./assets/DiagramaDeClases.drawio.png)
   
 
 
