@@ -27,7 +27,7 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 ![Extraer](./assets/resultados_pricecheck.png)
 
 
-### Principales tecnologías utilizadas
+## Principales tecnologías utilizadas
 Para craer este sistema se utilizaron las siguientes tecnologías:
 - Node.js  para la gran parte del backend.
 - Python para realizar el Web Scraping (extraer la información de los productos).
