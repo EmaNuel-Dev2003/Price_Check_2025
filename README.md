@@ -11,9 +11,9 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 - Carrito de Compras Inteligente: El sistema cuenta con un carrito de compras, el cual compara los productos agregados con productos disponibles en otros supermercados, hace una evalución de los precios y recomienda la opción más económica.
 
 
-
 ## Capturas
 ![Login](./assets/login_pricecheck.png)
+La aplicación cuenta con un Login el cual le permite a los usuarios iniciar sesión o registrarse.
 
 ![Home](./assets/homepage_pricecheck.png)
 
@@ -27,8 +27,6 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 ![Extraer](./assets/resultados_pricecheck.png)
 
-
-### Preview Demo
 
 
 
