@@ -34,17 +34,17 @@ Lenguajes de programación:
 
 Frameworks y otras herramientas:
 - Node.js
-- 
 - React (CRA)
+- PostgreSQL
 - Selenium
 - BeautifulSoup
-- 
+- Node-fetch
+- Sharp
+- Resemblejs
+- String-simility
+- Google Chrome
+- Toggle JavaScript
   
-- Node.js para la gran parte del backend.
-- Python para realizar el Web Scraping (extraer la información de los productos).
-- React para el frontend de la aplicación.
-- PostgreSQL como base de datos para el proyecto.
-
 ## Estructura del Proyecto
 ![Diagrama de Clases](./assets/DiagramaDeClases.drawio.png)
   
