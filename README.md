@@ -48,7 +48,8 @@ Frameworks y otras herramientas:
 ## Estructura del Proyecto
 ![Diagrama de Clases](./assets/DiagramaDeClases.drawio.png)
   
-## Mejoras a inplementar en la siguiente fase
+## Mejoras a implementar
+En la siguiente fase del proyecto se implementarán las siguientes actualizaciones:
 - Sistemas de pago.
 - Subscripciones premium y gratuitas.
 - Extracción y actualización automática de productos.
