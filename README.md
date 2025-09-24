@@ -14,7 +14,7 @@ Price Check es una aplicación web que le permite a los usuarios realizar búsqu
 
 ![Home](./assets/homepage_pricecheck.png)
 
-![Categorías](./assets/categorias_pricecheck.png)
+![Categorías](./assets/categorias_prcecheck.png)
 
 ![Carrito](./assets/carrito_pricecheck.png)
 
