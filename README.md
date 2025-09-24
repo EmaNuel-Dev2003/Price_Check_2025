@@ -58,7 +58,7 @@ En la siguiente fase del proyecto se implementarán las siguientes actualizacion
 - Versión mobile optimizada.
 
 ## Colaboradores 
-Este proyecto fue realizado en colaboración con Emanuel Defour y Mateo Quintela, como un proyecto prototipo solicitado por la empresa de software PHI IT.
+Este proyecto fue creado por  y Mateo Quintel, como un proyecto prototipo solicitado por la empresa de software PHI IT.
 ### 
 
 
