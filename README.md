@@ -13,7 +13,7 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 
 
 ## Capturas
-![Login](./assets/logo_priceCheck.png)
+![Login](./assets/login_pricecheck.png)
 
 ### Preview Demo
 
