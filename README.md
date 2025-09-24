@@ -15,6 +15,8 @@ Lácteos, frutas, verduras, carnes, productos de limpieza, etc.
 ![Login](./assets/login_pricecheck.png)
 La aplicación cuenta con un Login el cual le permite a los usuarios iniciar sesión o registrarse.
 
+
+
 ![Home](./assets/homepage_pricecheck.png)
 
 ![Categorias](./assets/categorias_prcecheck.png)
