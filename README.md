@@ -55,5 +55,5 @@ En la siguiente fase del proyecto se implementarán las siguientes actualizacion
 - Versión móvil optimizada.
 
 ## Colaboradores 
-Este proyecto es un prototipo solicitado por la empresa de software **PHI IT** y fue creado por **Emanuel Dufour, Mateo Quintela y Emanuel Núñez
+Este programa fue un proyecto académico que se realizó en colaboración con la empresa de software **PHI IT** y fue creado por **Emanuel Dufour, Mateo Quintela y Emanuel Núñez
 (EmaDev)**.
